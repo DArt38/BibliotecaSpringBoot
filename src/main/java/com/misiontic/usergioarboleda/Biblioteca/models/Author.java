@@ -1,7 +1,9 @@
 package com.misiontic.usergioarboleda.Biblioteca.models;
 
 import java.io.Serializable;
+import java.util.Set;
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
@@ -16,6 +18,10 @@ public class Author implements Serializable {
     private String lastname;
 
 
+    @ManyToMany(mappedBy = "authors")
+    private Set<Book> books;
+
+
     /**
      *
      * @param code
@@ -27,5 +33,34 @@ public class Author implements Serializable {
         this.name = name;
         this.lastname = lastname;
 
+    }
+
+        //// Getters and Setters
+    public Integer getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public Set<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(Set<Book> books) {
+        this.books = books;
     }
 }

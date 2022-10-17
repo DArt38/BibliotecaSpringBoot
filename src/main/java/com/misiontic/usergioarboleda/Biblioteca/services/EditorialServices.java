@@ -35,7 +35,7 @@ public class EditorialServices {
     public Editorial updateEditorial(Editorial editorial){
         if(editorial.getId() != null){
             Optional<Editorial> temp = editorialRepository.getEditorial(editorial.getId());
-            if(!temp.isEmpty() ){
+            if(!temp.isPresent() ){
                 if(editorial.getName() != null)
                     temp.get().setName(editorial.getName());
                 if(editorial.getCountry() != null)

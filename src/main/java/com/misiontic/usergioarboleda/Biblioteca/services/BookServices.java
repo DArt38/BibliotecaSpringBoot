@@ -29,7 +29,7 @@ public class BookServices {
     public  Book insertBook(Book book){
         if(book.getIsbn() != null){
             Optional<Book> temp = bookRepository.getBook( book.getIsbn() );
-            if( temp.isEmpty() )
+            if( temp.isPresent() )
                 if(book.getTitle() != null && book.getRegister_date() != null && book.getEditorial_fk() != null)
                     return bookRepository.save(book);
                 else
@@ -44,7 +44,7 @@ public class BookServices {
     public Book updateBook(Book book){
         if(book.getIsbn() != null){
             Optional<Book> temp = bookRepository.getBook( book.getIsbn() );
-            if( !temp.isEmpty() ){
+            if( !temp.isPresent() ){
                 if(book.getYear() != null)
                     temp.get().setYear( book.getYear() );
                 if(book.getAuthors() != null)

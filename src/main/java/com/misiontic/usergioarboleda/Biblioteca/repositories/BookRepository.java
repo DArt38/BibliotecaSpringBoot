@@ -17,7 +17,7 @@ public class BookRepository {
         return(List<Book>) bookCRUDRepository.findAll();
     }
 
-    public List<Book> getBooksByDates(String start,String end){
+    public List<Book> getBooksByDates(int start,int end){
         return bookCRUDRepository.findBooksByDates(start,end);
     }
 

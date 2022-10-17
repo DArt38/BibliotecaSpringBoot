@@ -22,18 +22,6 @@ public class Author implements Serializable {
     private Set<Book> books;
 
 
-    /**
-     *
-     * @param code
-     * @param name
-     * @param lastname
-     */
-    public Author(Integer code,String name,String lastname){
-        this.code = code;
-        this.name = name;
-        this.lastname = lastname;
-
-    }
 
         //// Getters and Setters
     public Integer getCode() {

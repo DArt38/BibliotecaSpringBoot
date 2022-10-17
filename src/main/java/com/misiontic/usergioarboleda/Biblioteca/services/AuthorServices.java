@@ -25,7 +25,7 @@ public class AuthorServices {
     public Author insertAuthor(Author author){
         if(author.getCode() != null){
                 Optional<Author> temp = authorRepository.getAuthor(author.getCode());
-                if(temp.isEmpty()) {
+                if(temp.isPresent()) {
                     if (author.getName() != null && author.getLastname() != null)
                         return authorRepository.save(author);
                     else
@@ -41,7 +41,7 @@ public class AuthorServices {
     public Author updateAuthor(Author author){
         if(author.getCode() != null){
             Optional<Author> temp = authorRepository.getAuthor(author.getCode());
-            if(!temp.isEmpty()){
+            if(!temp.isPresent()){
                 if(author.getName() != null)
                     temp.get().setName(author.getName());
 

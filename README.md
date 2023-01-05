@@ -2,8 +2,9 @@
 Esta biblioteca es una aplicación web desarrollada con Spring Boot que permite a los usuarios gestionar una colección de libros. Los usuarios pueden agregar, eliminar y buscar libros en la base de datos.
 
 ## Requisitos
-Java 8 o superior
-Maven
+Java 8 o superior<br>
+Maven<br>
+MySQL
 
 ## Instalación
 Para utilizar esta biblioteca, primero debes clonar este repositorio y asegurarte de tener los requisitos instalados. Luego, puedes utilizar Maven para compilar y ejecutar la aplicación con el siguiente comando:

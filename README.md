@@ -1,12 +1,14 @@
-# BibliotecaSpringBoot
-Backend SpringBoot 
+# Biblioteca Spring Boot
+Esta biblioteca es una aplicación web desarrollada con Spring Boot que permite a los usuarios gestionar una colección de libros. Los usuarios pueden agregar, eliminar y buscar libros en la base de datos.
 
-## Modulos
-### Modelos
-Se van a tener modelos  de autor,editorial y libro
+## Requisitos
+Java 8 o superior
+Maven
 
-### Repositorios
+## Instalación
+Para utilizar esta biblioteca, primero debes clonar este repositorio y asegurarte de tener los requisitos instalados. Luego, puedes utilizar Maven para compilar y ejecutar la aplicación con el siguiente comando:
 
-### Servicios
+mvn spring-boot:run
 
-### Controladores
+Una vez que la aplicación esté en ejecución, puedes acceder a ella a través de un navegador web en la dirección http://localhost:8080.
+
